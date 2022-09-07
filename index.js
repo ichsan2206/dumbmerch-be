@@ -11,14 +11,6 @@ const {Server} = require('socket.io')
 const router = require('./src/routes')
 const app = express()
 
-// conect sequelize
-// Connect
-const sequelize = require("./config/connect");
-
-sequelize.authenticate().then(()=>{
-    console.log("connected")
-});
-
 // add after app initialization
 const server = http.createServer(app)
 const io = new Server(server, {
