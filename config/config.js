@@ -19,12 +19,6 @@ module.exports = {
 },
 "production": {
     "use_env_variable": process.env.DATABASE_URL,
-    "dialect": "mysql",
-    "dialectOptions":{
-        "ssl":{
-            "require":  true,
-            "rejectUnauthorization": false
-        }
-    }
+    "dialect": "mysql"
 }
 };

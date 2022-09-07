@@ -11,7 +11,11 @@ let sequelize;
 
 
 if (config.use_env_variable) {
-  sequelize = new Sequelize(process.env[config.use_env_variable], config);
+   sequelize = new Sequelize ("railway","root", "xXAsPTmytegGN8Bbd7Si",{
+    host:"containers-us-west-84.railway.app",
+    port : 7330,
+    dialect: "mysql"
+});
 } else {
   sequelize = new Sequelize(config.database, config.username, config.password, config);
 }
