@@ -1,0 +1,22 @@
+{
+"development": {
+    "username": "root",
+    "password": "gwjDvPCDtK2NdhcSYpnO",
+    "database": "railway",
+    "port": 5889,
+    "host": "containers-us-west-75.railway.app",
+    "dialect": "mysql"
+},
+"test": {
+  "username": "root",
+  "password": "gwjDvPCDtK2NdhcSYpnO",
+  "database": "railway",
+  "port": 5889,
+  "host": "containers-us-west-75.railway.app",
+  "dialect": "mysql"
+},
+"production": {
+  "use_env_variable": "mysql://root:gwjDvPCDtK2NdhcSYpnO@containers-us-west-75.railway.app:5889/railway",
+  "dialect": "mysql"
+}
+}
