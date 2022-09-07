@@ -10,7 +10,6 @@ const {Server} = require('socket.io')
 // Get routes to the variabel
 const router = require('./src/routes')
 const app = express()
-const port = 5000;
 
 // add after app initialization
 const server = http.createServer(app)
@@ -30,4 +29,6 @@ app.use('/api/v1/', router)
 // static image view root
 app.use("/uploads", express.static("uploads"))
 
-server.listen(port, () => console.log(`Listening on port ${port}!`))
+server.listen(process.env.PORT || 5000,()=>{
+  console.log("connected")
+});
